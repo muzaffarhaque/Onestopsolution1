@@ -1,0 +1,80 @@
+.home-main-section {
+    height: 100vh;
+
+    // border: 2px solid red;
+    padding-top: 2%;
+    background: url("../../images/kelly-sikkema-9OGNpJPVMZ8-unsplash.jpg") center;
+    background-size: cover;
+    .home-internal-container {
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-image: linear-gradient(to top, transparent -40%, rgba(50, 47, 47, 0.6) 90%);
+        padding: 0 15%;
+        text-align: center;
+        font-family: sans-serif;
+        padding-top: 5%;
+        h3 {
+            font-size: calc(1rem + 1.5vw);
+            color: white;
+            font-weight: bold;
+        }
+        h4 {
+            font-size: calc(.8rem + .8vw);
+            color: wheat;
+            margin-top: 5vh;
+            padding-left: 0;
+            text-align: left;
+            width: 50%;
+        }
+        .Typewriter {
+            display: inline-block;
+            color: blue;
+
+        }
+        .home-get-started {
+            padding: 5px 10px;
+            color: whitesmoke;
+            background-color: rgba(223, 194, 251,.3);
+            font-size: calc(.8rem + .8vw);
+            border: 2px solid whitesmoke;
+            border-radius: 200px;
+            // font-weight: bold;
+            margin-top: 5vh;
+            cursor: pointer;
+            &:hover {
+                background-color: transparent;
+                border: 2px solid rgb(130, 242, 242);
+            }
+        }
+    }
+}
+
+.Typewriter__cursor {
+    // background-color: red;
+    color: red;
+}
+@media (max-width:900px) {
+    .home-main-section{
+        background: url("../../images/siora-photography-hgFY1mZY-Y0-unsplash.jpg") center;
+        background-size: cover;
+    
+    .home-internal-container {
+        padding: 0 5% !important;
+        text-align: left !important;
+        line-height: 30px;
+        
+
+        h3 {
+            font-size: calc(.9rem + 1vw) !important;
+
+        }
+        h4 {
+
+            width: 90% !important;
+        }
+    }
+}
+}

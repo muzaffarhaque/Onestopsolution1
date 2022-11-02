@@ -1,0 +1,198 @@
+import React from 'react'
+import {useState} from 'react'
+import "./login.scss"
+import img from "../../images/login2-removebg-preview.png"
+import validator from 'validator'
+import { useNavigate } from 'react-router-dom'
+
+
+
+export default function Login() {
+    const Goto=useNavigate();
+    let [bolin,setBolin] = useState(false)
+    let [color,setColor]=useState(false)
+    let [logintempinfo,setLogintempinfo]=useState([])
+    let [logindata,setLogindata]=useState({email:"",password:""})
+    const [errorMessage, setErrorMessage] = useState(null)
+    let [createdata,setCreatedata]=useState({name:"",phone:"",email:"",password:"",repassword:""})
+    const {name,phone,email,password,repassword}=createdata;
+  
+    const validate = (value) => {
+ 
+        if (validator.isStrongPassword(value, {
+          minLength: 8, minLowercase: 1,
+          minUppercase: 1, minNumbers: 1, minSymbols: 1
+        })) {
+          setErrorMessage(null)
+        //   setColor(false);
+        } else {
+          setErrorMessage('Atleast One  Capital,Small,Spacial symbol and Number')
+        //   setColor(true);
+        }
+        return value;
+      }
+   
+    function logininfo(e){
+        if(!bolin){
+        setLogindata({...logindata,[e.target.name]:e.target.value})
+        
+        }else{
+        setCreatedata({...createdata,[e.target.name]:e.target.value})
+        setColor(false);
+        setErrorMessage(null)
+            
+    }
+
+    }
+
+   
+     
+
+
+
+
+
+    function loginsubmit(e){
+        e.preventDefault()
+        let findemail=logintempinfo.filter(item=>item.email.includes(email))
+      
+        let checkmail;
+        {findemail.length>0?checkmail=findemail[0].email:checkmail="yhg"}
+        
+        console.log("serch email",checkmail,typeof(findemail))
+        if(!bolin){ 
+        // console.log(logindata)
+        
+        let loginemail=logintempinfo.filter((ie)=>ie.email.includes(logindata.email))
+        
+        console.log(loginemail[0])
+        console.log(logindata.email,logindata.password)
+        console.log(loginemail[0].email,loginemail[0].password)
+
+        {logindata.email===loginemail[0].email && logindata.password===loginemail[0].password?Goto("/Home"):alert("EROOR Login Faile")}
+
+         setLogindata({email:"",password:""})
+
+
+
+
+
+        }else{
+          
+       
+         console.log(createdata.password,createdata.password.length)
+        // console.log(logintempinfo)
+       
+       
+
+
+
+         
+        
+
+
+
+        if(password===repassword && email!==checkmail && (password.length>=9)){
+            setBolin(false)
+            setColor(false);
+            setLogintempinfo([...logintempinfo,{name,phone,email,password,repassword}]);
+            setCreatedata({password:"",repassword:"",name:"",phone:"",email:""});
+            console.log(logintempinfo)
+        }else{
+            
+           
+            if(password!==repassword){
+                alert("Passwoed is not matching")
+                setCreatedata({password:"",repassword:""})
+            }if ( email===checkmail) {
+                setColor(true)
+            } if(password.length<=9){
+                setErrorMessage("password shoud be grather then 8 charactor")
+                console.log("password lent is not grather then 8")
+            }
+        }
+        }
+    }
+    return (
+        <div>
+            <div className="login-main-container">
+                <div className="login-left-image">
+                    <img src={img} alt="" />
+                </div>
+                <div className="login-create-right-container">
+
+                    <div className="login-both-container">
+                        {/* upper login and sign button container  */}
+                        <div className="login-singup-button-container"  onClick={() => {
+                                    setBolin(!bolin)
+                                }}>
+                          
+                                <div
+                                    onClick={() => {
+                                    setBolin(!bolin)
+                                }}
+                                    className="login-singup-button" style={!bolin?{transform:"translateX(00%)"}:{transform:"translateX(100%)"}}>{!bolin
+                                        ? `LOGIN`
+                                        : `SIGN UP`}
+                                </div>
+                           
+
+                        </div>
+
+                        {!bolin
+                            ? <div className="login-page">
+                                    <form className='login-form' onSubmit={loginsubmit}>
+                                        <fieldset>
+                                            <legend>Email</legend>
+                                            <input type="email" name='email' autoComplete='off' required onChange={logininfo} value={logindata.email} placeholder="onestopsolution@gmial.com"/>
+                                        </fieldset>
+
+                                        <fieldset>
+                                            <legend>Password</legend>
+                                            <input type="password" name='password' required onChange={logininfo} value={logindata.password} placeholder="*********"/>
+                                        </fieldset>
+                                        <button type='submit' className='login-page-button'>Login</button>
+                                        <p className='login-page-forgot-password'>
+                                            <a href="#">Forgot password</a>
+                                        </p>
+                                    </form>
+                                </div>
+                            : <div className="create-account">
+                                <form className='login-form' onSubmit={loginsubmit}>
+                                    <fieldset>
+                                        <legend>Name</legend>
+                                        <input type="text" name='name' autoComplete='off' value={name} onChange={logininfo} placeholder="Enter Your name"/>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Phone</legend>
+                                        <input type="tel" name='phone' autoComplete='off' value={phone } onChange={logininfo} placeholder="1239874569"/>
+                                    </fieldset>
+                                    <p className='email-shock-para' style={color?{display:"inline-block"}:{display:"none"}}>Email is allrady exist!</p>
+                                    <fieldset style={!color?{border:"2px solid rgb(199, 201, 251)"}:{border:"2px solid red"}}>
+                                        <legend>Email</legend>
+                                        <input type="email" name='email' autoComplete='off' value={email } onChange={logininfo} placeholder="onestopsolution@gmial.com"/>
+                                    </fieldset>
+                         {errorMessage === '' ? null : <p className='email-shock-para'>{errorMessage}</p>}
+                                    <fieldset style={errorMessage === null?{border:"2px solid rgb(199, 201, 251)"}:{border:"2px solid red"}}>
+                                        <legend>Password</legend>
+                                        <input type="password" name='password'  value={createdata.password}onChange={logininfo} placeholder="*********"/>
+                                    </fieldset>
+                                    <fieldset style={errorMessage === null?{border:"2px solid rgb(199, 201, 251)"}:{border:"2px solid red"}}>
+                                        <legend>Confirm Password</legend>
+                                        <input type="password" name='repassword' value={repassword} onChange={logininfo} placeholder="*********"/>
+                                    </fieldset>
+                                  
+                                    <button type='submit'  className='login-page-button sign-up-button'>SIGN UP</button>
+                                  
+                                   
+                                </form>
+
+                            </div>
+}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    )
+}
