@@ -72,7 +72,7 @@ let [val,setVal]=useState(0)
         <li> <Link smooth to="#"> <FontAwesomeIcon icon={faHome} className="icon2"/>&nbsp; HOME </Link></li>
         <li> <Link smooth to="#about"> <FontAwesomeIcon icon={faCircleInfo} className="icon2"/>&nbsp; ABOUT</Link></li>
         <li> <Link smooth to="#contact" > <FontAwesomeIcon icon={faContactCard} className="icon2"/>&nbsp; CONTACT</Link></li>
-        <li>  <Link smooth to="#contact"><FontAwesomeIcon icon={faBlog} className="icon2"/>&nbsp; BLOG</Link></li>
+        <li>  <Link smooth to="#blog"><FontAwesomeIcon icon={faBlog} className="icon2"/>&nbsp; BLOG</Link></li>
     
         {/* <li>
             

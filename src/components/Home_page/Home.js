@@ -3,15 +3,20 @@ import "./home.scss";
 import { NavLink } from "react-router-dom";
 import Login from "../login_page/Login";
 import Nevbar from "../Nevagation_bar/Nevbar";
+import Contact from "./Contact";
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLocation,
-  faEnvelope,
-  faPhone
-} from "@fortawesome/free-solid-svg-icons";
+import img from "../../images/icons/logo-full.jpeg"
+
 // import { library } from '@fortawesome/fontawesome-svg-core'
-import {faInstagram,faGithub,faTelegram,faTwitter,faYoutube,faFacebook} from '@fortawesome/free-brands-svg-icons'
+import {
+  faInstagram,
+  faGithub,
+  faTelegram,
+  faTwitter,
+  faYoutube,
+  faFacebook,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   const Offer = [
@@ -20,11 +25,11 @@ export default function Home() {
     { name: "Question Paper", img: "6262752089315739826" },
     { name: "Buy/Sell Books", img: "6262752089315739827" },
   ];
- 
+
   return (
     <>
-      <Nevbar  />
-{/* Home First page start */}
+      <Nevbar />
+      {/* Home First page start */}
       <section className="home-main-section">
         <div className="home-internal-container">
           <h3>ONE STOP SOLUTION</h3>
@@ -57,11 +62,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-{/* Home First page End */}
+      {/* Home First page End */}
 
-
-
-{/* we offer provided start */}
+      {/* we offer provided start */}
       <section className="home-second-section-main-container">
         <i>
           {" "}
@@ -85,117 +88,55 @@ export default function Home() {
             })}
         </div>
       </section>
-{/* we offer provided End */}
+      {/* we offer provided End */}
 
-{/*About page start  */}
+      {/*About page start  */}
       <section id="about" className="about-us-main-container">
         <i>
           {" "}
           <span className="sec-home-headding"> About us </span>
         </i>
-      </section>
-{/*About page End  */}
-
-
-{/*Contact page start  */}
-      <section id="contact" className="about-us-main-container">
-        <i>
-          {" "}
-          <span className="sec-home-headding"> Contact </span>
-        </i>
-        <div className="home-location-contact-container">
-
-
-          <div className="contact-us-page-form">
-
-            <form action="">
-
-              <div className="contact-forme-row">
-                <div>
-              <label htmlFor="name">Name </label><br/>
-              <input type="text" id="name" placeholder="Enter your name"/>
-              </div>
-              <div>
-              <label htmlFor="phone">Phone</label><br/>
-              <input type="text" id="phone" placeholder="123456789"/>
-              </div>
-              </div>
-
-              <div className="contact-forme-row">
-                <div>
-              <label htmlFor="email">Email </label><br/>
-              <input type="email" id="email" placeholder="onestopsollution@gmail.com"/>
-              </div>
-              <div>
-              <label htmlFor="subj">Subject</label><br/>
-              <input type="text" id="subj" placeholder="..."/>
-              </div>
-              </div>
-
-              <div className="contact-form-massage-row">
-              <label htmlFor="emassage">Massage </label><br/>
-                <textarea placeholder="Your massage" name="" id="massage"  rows="7"></textarea>
-              </div>
-
-            </form>
-
+        <div className="about-content-container">
+          <div>
+            <p><i> &nbsp;&nbsp;&nbsp;&nbsp;We at<b> “One Stop Solution”</b> strive to offer all the student requirements like finding relevant and updated notes, courses to enhance skills, past years question papers to effectively prepare for the exams etc at one single destination. The solution provides a platform for students to buy and sell books among the student community. The platform also provides students with latest updates and deadlines about important forms, scholarships, internships and other career enhancing opportunities. "One Stop Solution" is a centralized platform where students can get an easy access of resources and can improve their skill set. Our platform offers reviews and recommendation to other students on notes, books and courses.</i></p>
           </div>
-
-
-          <div className="contact-us-location">
-            <ul>
-              <li>
-                <div className="contact-icon-name">
-                  <FontAwesomeIcon icon={faPhone} className="contact-icon" />{" "}
-                  <span>
-                    {" "}
-                    Call : <p>12345678</p>
-                  </span>
-                </div>
-              </li>
-              <li>
-                <div className="contact-icon-name">
-                  <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
-                  <span>
-                    {" "}
-                    Email :<p>onestopsolution@gmail.com</p>
-                  </span>
-                </div>
-              </li>
-              <li>
-                <div className="contact-icon-name">
-                  <FontAwesomeIcon icon={faLocation} className="contact-icon" />
-                  <span>
-                    {" "}
-                    Location :<p>Taj-Reendency,Jalan-nager Aurangabad,431001</p>
-                  </span>
-                </div>
-              </li>
-            </ul>
+          <div>
+            <div className="imgae-frame"><img src={img} alt="" /></div>
           </div>
-
-
         </div>
       </section>
-{/*Contact page End  */}
+      {/*About page End  */}
 
+      {/* Bloag start */}
 
-{/* Footer start */}
-<footer className="home-footer">
+      <section id="blog" className="home-blog-section">
+        <i>
+          {" "}
+          <span className="sec-home-headding"> Blog </span>
+        </i>
+        
+      </section>
 
-  <div className="footer-Copyright">
-    <span>© Copyright OneStopSolution. All Rights Reserved</span>
-    <span>
-      <FontAwesomeIcon className="footer-icon" icon={faTelegram} />
-      <FontAwesomeIcon className="footer-icon" icon={faFacebook} />
-      <FontAwesomeIcon className="footer-icon" icon={faGithub} />
-      <FontAwesomeIcon className="footer-icon" icon={faInstagram} />
-      <FontAwesomeIcon className="footer-icon" icon={faTwitter} />
-      <FontAwesomeIcon className="footer-icon" icon={faYoutube} />
-    </span>
-  </div>
+      {/* blog End */}
 
-</footer>
+      {/*Contact page start  */}
+        <Contact/>
+      {/*Contact page End  */}
+
+      {/* Footer start */}
+      <footer className="home-footer">
+        <div className="footer-Copyright">
+          <span>© Copyright OneStopSolution. All Rights Reserved</span>
+          <span>
+            <FontAwesomeIcon className="footer-icon" icon={faTelegram} />
+            <FontAwesomeIcon className="footer-icon" icon={faFacebook} />
+            <FontAwesomeIcon className="footer-icon" icon={faGithub} />
+            <FontAwesomeIcon className="footer-icon" icon={faInstagram} />
+            <FontAwesomeIcon className="footer-icon" icon={faTwitter} />
+            <FontAwesomeIcon className="footer-icon" icon={faYoutube} />
+          </span>
+        </div>
+      </footer>
     </>
   );
 }
