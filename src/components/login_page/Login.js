@@ -61,13 +61,13 @@ export default function Login() {
         
         console.log("serch email",checkmail,typeof(findemail))
         if(!bolin){ 
-        // console.log(logindata)
+         console.log(logindata)
         
         let loginemail=logintempinfo.filter((ie)=>ie.email.includes(logindata.email))
         
         console.log(loginemail[0])
         console.log(logindata.email,logindata.password)
-        console.log(loginemail[0].email,loginemail[0].password)
+        console.log(loginemail[0].email,loginemail[0].password,"this")
 
         {logindata.email===loginemail[0].email && logindata.password===loginemail[0].password?Goto("/Home"):alert("EROOR Login Faile")}
 
@@ -81,7 +81,7 @@ export default function Login() {
           
        
          console.log(createdata.password,createdata.password.length)
-        // console.log(logintempinfo)
+       
        
        
 
@@ -111,6 +111,7 @@ export default function Login() {
                 console.log("password lent is not grather then 8")
             }
         }
+        console.log(logintempinfo)
         }
     }
     return (

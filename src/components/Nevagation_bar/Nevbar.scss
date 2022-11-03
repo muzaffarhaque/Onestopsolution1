@@ -11,9 +11,27 @@
 #so {
     display: none;
 }
+.header-right-profile{
+    position: absolute;
+    right: 3%;
+    top: 15%;
+    padding: 10px;
+}
+.header-logo{
+    position: absolute;
+    display: inline-block;
+    top: -27%;
+    left: 5%;
+    width: 100px;
+    height: 90px;
+    
+
+}
 .header {
-    padding: .7vw;
-    background-color: #095296;
+    padding: 1.5vw .7vw;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px rgba(34, 33, 33,.5);
+    // background-color: #095296;
     position: fixed;
     z-index: 99999;
     width: 100%;
@@ -25,13 +43,14 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    margin-right: 3%;
+    margin-right: 20%;
 
 }
-.unorder-list > li ,.list{
+.unorder-list > li ,.list,.unorder-list>li>a{
     //    display: inline;
     text-decoration: none;
-    color: white;
+    // color: white;
+    color: rgb(143, 139, 139);
     font-size: calc( 10px + .2vw);
     font-style: normal;
     font-weight: 600;
@@ -39,7 +58,7 @@
     margin: 0 0.9vw;
     cursor: pointer;
     &:hover {
-        color: aqua;
+        color: rgb(12, 12, 12);
     }
 }
 .header-hepline-box {
@@ -57,38 +76,7 @@
         }
     }
 }
-.mubile-header {
-    display: flex;
-    position: absolute;
-    left: 10%;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    // border: 2px solid red;
-    .mubile-icon {
-        // border: 1px solid red;
-       
-        display: flex;
-        align-content: center;
-        justify-content: space-around;
-        &:first-child {
-            span {
-                &:nth-child(2) {
-                    font-size: calc(0.75rem + .7vw);
-                    font-style: normal;
-                    font-weight: 600;
-                    // font-size: 12px;
-                    line-height: 112.9%;
-                    margin-left: 1vw;
-                    padding: 2vh 0;
-                
-                }
-            }
-        }
 
-    }
-
-}
 
 @media (max-width:900px) {
     .header {
@@ -164,25 +152,5 @@
         align-items: center;
     }
   
-    .mubile-header {
-      
-        left: 20%;
-
-        .mubile-icon {
-          
-            &:first-child {
-                span {
-                    &:nth-child(2) {
-                     
-                        line-height: 112.9%;
-                        margin-left: 4vw;
-                       
-                    
-                    }
-                }
-            }
-
-        }
-
-    }
+  
 }
