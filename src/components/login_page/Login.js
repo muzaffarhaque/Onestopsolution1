@@ -54,22 +54,24 @@ export default function Login() {
 
     function loginsubmit(e){
         e.preventDefault()
-        let findemail=logintempinfo.filter(item=>item.email.includes(email))
-      
+        let findemail=logintempinfo.find(item=>{return item.email=== email})
+    //    console.log(findemail.email,"find mail form data through find")
         let checkmail;
-        {findemail.length>0?checkmail=findemail[0].email:checkmail="yhg"}
+        {findemail?checkmail=findemail.email:checkmail="yhg"}
         
-        console.log("serch email",checkmail,typeof(findemail))
+        console.log("serch email",checkmail,typeof(findemail),"firs data and typee")
         if(!bolin){ 
          console.log(logindata)
         
-        let loginemail=logintempinfo.filter((ie)=>ie.email.includes(logindata.email))
-        
-        console.log(loginemail[0])
+       
+        let datafindmaile=logintempinfo.find((ie)=>{return ie.email===logindata.email})
+        let loginemail;
+        {datafindmaile?loginemail=datafindmaile:loginemail="xy*s@"}
+        console.log(loginemail)
         console.log(logindata.email,logindata.password)
-        console.log(loginemail[0].email,loginemail[0].password,"this")
+        console.log(loginemail.email,loginemail.password,"this")
 
-        {logindata.email===loginemail[0].email && logindata.password===loginemail[0].password?Goto("/Home"):alert("EROOR Login Faile")}
+        {logindata.email===loginemail.email && logindata.password===loginemail.password?Goto("/Home"):alert("Wrong Email and Password")}
 
          setLogindata({email:"",password:""})
 
@@ -92,7 +94,7 @@ export default function Login() {
 
 
 
-        if(password===repassword && email!==checkmail && (password.length>=9)){
+        if(password===repassword && email!==checkmail && (password.length>=8)){
             setBolin(false)
             setColor(false);
             setLogintempinfo([...logintempinfo,{name,phone,email,password,repassword}]);
@@ -106,7 +108,7 @@ export default function Login() {
                 setCreatedata({password:"",repassword:""})
             }if ( email===checkmail) {
                 setColor(true)
-            } if(password.length<=9){
+            } if(password.length<=8){
                 setErrorMessage("password shoud be grather then 8 charactor")
                 console.log("password lent is not grather then 8")
             }
@@ -164,9 +166,9 @@ export default function Login() {
                                         <legend>Name</legend>
                                         <input type="text" name='name' autoComplete='off' value={name} onChange={logininfo} placeholder="Enter Your name"/>
                                     </fieldset>
-                                    <fieldset>
+                                    <fieldset >
                                         <legend>Phone</legend>
-                                        <input type="tel" name='phone' autoComplete='off' value={phone } onChange={logininfo} placeholder="1239874569"/>
+                                        <input type="tel" pattern='[0-9]{10}' name='phone' autoComplete='off' value={phone } onChange={logininfo} placeholder="1239874569"/>
                                     </fieldset>
                                     <p className='email-shock-para' style={color?{display:"inline-block"}:{display:"none"}}>Email is allrady exist!</p>
                                     <fieldset style={!color?{border:"2px solid rgb(199, 201, 251)"}:{border:"2px solid red"}}>

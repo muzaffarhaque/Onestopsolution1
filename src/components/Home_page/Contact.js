@@ -86,7 +86,7 @@ export default function Contact() {
                   rows="7"
                 ></textarea>
               </div>
-              <input type="submit" value="Send" />
+              <input className="submit-form-button" type="submit"  value="Submit" />
             </form>
           </div>
 

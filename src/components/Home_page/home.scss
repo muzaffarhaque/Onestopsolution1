@@ -5,7 +5,7 @@
     padding: 2% 0 0;
     background: url("../../images/kelly-sikkema-9OGNpJPVMZ8-unsplash.jpg") center;
     background-size: cover;
-    .home-internal-container {
+     .home-internal-container{
         height: 70%;
         display: flex;
         align-items: center;
@@ -16,6 +16,7 @@
         text-align: center;
         font-family: sans-serif;
         padding-top: 4%;
+        
 
         h3 {
             font-size: calc(1rem + 1.5vw);
@@ -51,6 +52,7 @@
             align-items: center;
             justify-content: center;
             padding: 6vh 0;
+           
             .home-get-started {
                 padding: 5px 10px;
                 color: whitesmoke;
@@ -61,6 +63,7 @@
                 // font-weight: bold;
 
                 cursor: pointer;
+
                 &:hover {
                     background-color: transparent;
                     border: 2px solid rgb(130, 242, 242);
@@ -96,6 +99,9 @@
             background-color: white;
             box-shadow: 0 0 8px rgba(70, 100, 199, 0.6);
             cursor: pointer;
+            .ankertolink{
+                display: flex ;
+            }
             &:first-child {
                 border-top: 5px solid red;
                 &:hover {
@@ -152,7 +158,7 @@
     border-bottom: 2px solid black;
     font-weight: bolder;
     padding: 10px 0;
-    margin: 4vw;
+    margin:2vh 4vw;
 }
 .about-us-main-container {
     height: auto;
@@ -248,6 +254,18 @@
 
     }
 }
+.submit-form-button{
+    font-size: calc(.7rem + .7vw);
+    font-weight: bold;
+    outline: none;
+    border: 2px solid #244f90;
+    color: white;
+    background-color: #5483ca;
+    padding: .4vw  1vw;
+    margin: 0 2vw;
+    cursor: pointer;
+    border-radius: 200px;
+}
 .contact-icon {
     font-size: calc(.7rem + .7vw);
     background-color: rgba(160, 222, 222,.4);
@@ -265,12 +283,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5vh 10%;
+    padding: 5vh 5vw;
     background-color: whitesmoke;
     span{
         &:first-child{
-            font-size: calc(.6rem + .6vw);
+            font-size: calc(0.4rem + 1.2vw);
             color: #5b83be;
+        }
+        &:nth-child(2){
+            text-align: center;
         }
     }
 }
@@ -291,12 +312,22 @@
 
 
 .home-blog-section{
-    width: auto;
-    height: 100vh;
-    padding: 4vw 0%;
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    overflow: hidden;
 }
 
-
+.back-icon{
+    font-size: calc(1rem + .5vw);
+    color: blue;
+    margin: 1vw 2vw;
+    font-weight: bold;
+    cursor: pointer;
+    padding: .3vw;
+  
+    
+}
 
 
 // ? About style
@@ -309,7 +340,7 @@
         &:first-child{
             width: 55%;
             p{
-                font-size: calc(.7rem + .7vw);
+                font-size: calc(.8rem + .6vw);
                 margin: 3vw;
                 // text-align: justify;
                 color: rgba(4, 4, 4,.6);
@@ -320,8 +351,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
             .imgae-frame{
-                width:320px;
+                width:320px !important;
                 height: 320px;
                 display: flex;
                 align-items: center;
@@ -345,11 +377,25 @@
 
 
 @media (max-width:900px) {
+    .about-us-main-container {
+        padding-top:90px ;
+    }
+   
     .about-content-container{
-        display: flex;
-        flex-wrap: wrap-reverse;
+        
         div{
-            width: 100%;
+            width: 100% !important;
+        &:first-child{
+           
+            p{
+                font-size: calc(1rem + .7vw);
+                text-align: justify;
+              
+            }
+        }
+        &:nth-child(2){
+            padding: 5vh 0;
+        }
         }
     }
 
@@ -357,8 +403,8 @@
 
 
     .home-main-section {
-        background: url("../../images/siora-photography-hgFY1mZY-Y0-unsplash.jpg") center;
-        background-size: cover;
+        // background: url("../../images/siora-photography-hgFY1mZY-Y0-unsplash.jpg") center;
+        // background-size: cover;
 
         .home-internal-container {
             padding: 0 5% !important;

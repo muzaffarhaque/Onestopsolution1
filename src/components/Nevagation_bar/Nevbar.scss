@@ -21,7 +21,7 @@
     position: absolute;
     display: inline-block;
     top: -27%;
-    left: 5%;
+    left: 6%;
     width: 100px;
     height: 90px;
     
@@ -44,6 +44,7 @@
     align-items: center;
     justify-content: end;
     margin-right: 20%;
+    
 
 }
 .unorder-list > li ,.list,.unorder-list>li>a{
@@ -89,6 +90,10 @@
         border: 1px solid rgba(217, 216, 216,.3);
 
     }
+    .header-logo{
+top: -16%;
+left: 17%;
+    }
     .icon1 {
         display: block;
         font-size: 22px;
@@ -101,27 +106,28 @@
         // align-items:center;
         justify-content: initial;
         flex-direction: column;
-        margin-top: 8vh;
+        margin-top: 7vh;
         //  border: 2px solid red;
         padding-top: 25px;
-        height: 90vh;
-        width: 100%;
+        height: 94vh;
+        width: 105%;
         background-color: #095296;
         transition: all .7s;
-        transform: translateX(-102%);
+         transform: translateX(-102%);
         
     }
     #so:checked~.header>.unorder-list{
         transform: translateX(0%);
                 }
-    .unorder-list > li,.list {
+    .unorder-list > li,.list,.unorder-list > li>a {
 
-        font-size: calc( .8rem + 1.3vw);
-        margin: 1vh;
+        font-size: calc( 1rem + 1.3vw);
+        margin: 1.5vh;
         border: 1px solid transparent;
         width: 100%;
-        padding: 1.5vh;
-        text-align: center;
+        padding: 1.5vh 10%;
+        text-align: left;
+        color: white;
         cursor: pointer;
         &:hover {
             color: aqua;

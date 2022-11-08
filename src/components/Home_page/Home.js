@@ -4,9 +4,11 @@ import { NavLink } from "react-router-dom";
 import Login from "../login_page/Login";
 import Nevbar from "../Nevagation_bar/Nevbar";
 import Contact from "./Contact";
+import Blog from "../Blog_page/Blog"
 import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import img from "../../images/icons/logo-full.jpeg"
+import {HashLink as Link } from 'react-router-hash-link'
 
 // import { library } from '@fortawesome/fontawesome-svg-core'
 import {
@@ -20,10 +22,10 @@ import {
 
 export default function Home() {
   const Offer = [
-    { name: "Notes", img: "study" },
-    { name: "Courses", img: "6262752089315739825" },
-    { name: "Question Paper", img: "6262752089315739826" },
-    { name: "Buy/Sell Books", img: "6262752089315739827" },
+    { name: "Notes", img: "study", link:"/Notes"},
+    { name: "Courses", img: "6262752089315739825" ,link:"/Courses" },
+    { name: "Question Paper", img: "6262752089315739826", link:"/QuesPaper" },
+    { name: "Buy/Sell Books", img: "6262752089315739827" , link:"/BuysellBook"},
   ];
 
   return (
@@ -45,8 +47,8 @@ export default function Home() {
                   " Relevant Courses.",
                   " Notes.",
                   " Peer Mentoring.",
-                  "Previous Year Question Paper.",
-                  " Resell & Buy Used Books.",
+                  "Previous Year Q-Paper.",
+                  " Resell/Buy  Books.",
                 ],
                 autoStart: true,
                 loop: true,
@@ -58,14 +60,16 @@ export default function Home() {
             />
           </h4>
           <div className="home-button-container">
-            <button className="home-get-started">Let's Start !</button>
+          <a href="#offer"> 
+            <button className="home-get-started">  Let's Start !</button>
+            </a>
           </div>
         </div>
       </section>
       {/* Home First page End */}
 
       {/* we offer provided start */}
-      <section className="home-second-section-main-container">
+      <section id="offer" className="home-second-section-main-container">
         <i>
           {" "}
           <span className="sec-home-headding"> We Offer : </span>
@@ -75,7 +79,9 @@ export default function Home() {
           {Offer &&
             Offer.map((item, i) => {
               return (
+            
                 <div key={i} className="solution-box">
+                    <NavLink className="ankertolink" to={item.link}>
                   <span>{item.name}</span>
                   <span>
                     <img
@@ -83,7 +89,9 @@ export default function Home() {
                       alt="icon"
                     />
                   </span>
+                  </NavLink>
                 </div>
+               
               );
             })}
         </div>
@@ -109,13 +117,9 @@ export default function Home() {
 
       {/* Bloag start */}
 
-      <section id="blog" className="home-blog-section">
-        <i>
-          {" "}
-          <span className="sec-home-headding"> Blog </span>
-        </i>
-        
-      </section>
+      
+        {/* <Blog/> */}
+   
 
       {/* blog End */}
 
