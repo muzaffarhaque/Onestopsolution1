@@ -1,0 +1,169 @@
+:root {
+    --logoblue: #345e9e;
+}
+.main-container-notes-page {
+    padding: 5px 3%;
+    background-color: rgba(242, 249, 249,.8);
+}
+.notes-page-back-icon {
+    font-size: 22px;
+    cursor: pointer;
+    float: left;
+}
+.top-hedder-back-frame {
+    text-align: center;
+    span {
+
+        display: inline-block;
+        font-size: calc(.7rem + 0.9vw);
+        font-weight: bold;
+        margin: 1vw;
+        padding: 0.5vw;
+        margin-bottom: 1vh;
+        color: rgb(32, 79, 97);
+
+        border-bottom: 3px solid blue;
+    }
+
+}
+.banch-slected-opction {
+    margin: 2vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.year-branch2,
+.years-branch1 {
+    width: 30%;
+    margin: 10px 5px;
+    font-size: calc(13px + .7vw);
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 0;
+    color: var(--logoblue);
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(46, 44, 44,.3);
+    &:hover {
+        box-shadow: 0 0 10px rgba(139, 153, 233, 0.8);
+        color: rgb(68, 11, 200);
+    }
+}
+.year-branch2 {
+    
+    box-shadow: 0 0 10px rgba(139, 153, 233, 0.8);
+    color: red;
+    &:hover {
+    
+        color: red;
+    }
+
+}
+.all-years-notes-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: white;
+
+}
+
+.year-sub2,
+.years-subjects {
+    width: 25%;
+    text-align: center;
+    font-size: calc(11px + 1vw);
+    border: 2px solid rgba(213, 198, 198,.2);
+
+    background-color: rgba(178, 178, 252,.2);
+    color: var(--logoblue);
+
+    padding: 0.5vh 0;
+    cursor: pointer;
+    &:hover {
+        border-top: 2px solid black;
+
+    }
+}
+.year-sub2 {
+    border-bottom: 2px solid transparent;
+    background-color: white;
+
+    color: blue;
+    border: 2px solid rgba(213, 198, 198,.0);
+    // border-radius: 0 0px 10px 10px;
+    border-top: 2px solid blue;
+
+}
+
+.subject-of-yearas {
+    border: 2px solid rgba(213, 198, 198,.2);
+    border-top: none;
+    background-color: white;
+
+}
+.slect-branch-name {
+    font-size: calc(14px + .6vw);
+    // margin: 10px;
+    padding: 10px;
+}
+
+// -------------------------- subject name component ---------------------------------------------------//
+
+.subjtect-name-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    // border: 2px solid green;
+    .subject-one {
+        width: calc(200px + 10%);
+        padding: 10px;
+        margin: 2vw;
+        font-size: calc(12px + .5vw);
+        border: 2px solid transparent;
+        box-shadow: 0 0 10px rgba(47, 46, 46,.2);
+        cursor: pointer;
+        &:nth-of-type(odd) {
+            border-left: 4px solid red;
+            &:hover {
+                box-shadow: 0 0 16px rgba(155, 63, 63, 0.7);
+                border-radius: 0 4px 4px 0;
+            }
+        }
+        // &:nth-of-type(3n+2){
+        //     border-left: 4px solid rgb(14, 232, 36);
+        // }
+        &:nth-of-type(even) {
+            border-left: 4px solid rgb(22, 26, 234);
+            &:hover {
+                box-shadow: 0 0 16px rgba(60, 111, 199, 0.7);
+                border-radius: 0 4px 4px 0;
+            }
+        }
+
+    }
+}
+.back-icon {
+    font-size: calc(1rem + 0.5vw);
+    color: blue;
+    margin: 0.5vw 1vw;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.1vw;
+}
+@media (max-width:700px) {
+    .subject-one {
+        width: 100% !important;
+    }
+    .years-branch1 {
+        width: 100%;
+    }
+    .year-branch2 {
+        width: 100%;
+      
+    }
+}

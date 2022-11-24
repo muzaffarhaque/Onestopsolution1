@@ -7,6 +7,7 @@ import Question_paper from "./components/We_Offer/Question_paper/Question_paper"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Buy_sell_books from './components/We_Offer/BuySellBooks/Buy_sell_books'
 import Blog from './components/Blog_page/Blog'
+import Profile from './components/profile/Profile'
 
 export default function () {
   return (
@@ -21,6 +22,7 @@ export default function () {
         <Route path='/QuesPaper' element={<Question_paper/>} />
         <Route path='/BuysellBook' element={<Buy_sell_books/>} />
         <Route path='/Blog' element={<Blog/>} />
+        <Route path='/home/profile' element={<Profile/>}/>
     </Routes>
     </BrowserRouter>
       

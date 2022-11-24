@@ -28,7 +28,7 @@ import {forwardRef, useImperativeHandle} from 'react';
           console.log(dat,"index of data")
           
           
-          let {title,author,details,date1}=dat;
+          let {title,author,details}=dat;
           setFormdata({title,author,details,date1})
         //   setFormdata({title:"",author:"",details:""})
           props.data()
