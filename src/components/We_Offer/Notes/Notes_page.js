@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState,createContext, useContext } from 'react'
 import "./notespages.scss"
-import {useNavigate} from 'react-router-dom';
+import {useNavigate,NavLink,Link, Navigate} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-
+const Globlepass=createContext();
 export default function Notes() {
 
 const navigate = useNavigate();
-const [year,setYear]=useState(null)
+const [branch1,setBranch1]=useState(null)
 function choicebranch(i){
-  // console.log(i,year)
-  setYear(i);
+  // console.log(i,Branch1)
+  setBranch1(i);
 }
 
  
@@ -18,20 +18,65 @@ function choicebranch(i){
     <>
       <div className="main-container-notes-page">
         <div className="top-hedder-back-frame">
-          <FontAwesomeIcon icon={faArrowLeft}  onClick={() => navigate(-1)} className="notes-page-back-icon back-icon"/> <span>-: Notes (study matarial) :-</span>        
+          <FontAwesomeIcon icon={faArrowLeft} title="Back" onClick={() => navigate(-1)} className="notes-page-back-icon back-icon"/> <span>-: Notes (study matarial) :-</span>        
         </div>
         <h4 className='slect-branch-name'>Slect Branch :-</h4>
         <div className="banch-slected-opction">
-          <div className={year!==1?"years-branch1":"year-branch2"} onClick={()=>choicebranch(1)} id='first'>Computer and Science</div>
-          <div className={year!==2?"years-branch1":"year-branch2"} onClick={()=>choicebranch(2)} id='second'>Mechanical</div>
-          <div className={year!==3?"years-branch1":"year-branch2"} onClick={()=>choicebranch(3)} id='third'> Civil</div>
-          <div className={year!==4?"years-branch1":"year-branch2"} onClick={()=>choicebranch(4)} id='final'>Electrical</div>
+          <div className={branch1!=="CSE"?"years-branch1":"year-branch2"} onClick={()=>choicebranch("CSE")} id='first'>Computer and Science</div>
+          <div className={branch1!=="MECh"?"years-branch1":"year-branch2"} onClick={()=>choicebranch("MECh")} id='second'>Mechanical</div>
+          <div className={branch1!=="CIVIL"?"years-branch1":"year-branch2"} onClick={()=>choicebranch("CIVIL")} id='third'> Civil</div>
+          <div className={branch1!=="ELECTR"?"years-branch1":"year-branch2"} onClick={()=>choicebranch("ELECTR")} id='final'>Electrical</div>
         </div>
+<Globlepass.Provider value={{branch:branch1}}>
+{
+  (()=>{
+    if(branch1==="CSE"){
+      return(
+       <>
+       <p>CSE</p>
+        <Branches/>
+
+       </>
+      )
+    }else if(branch1==="MECh"){
+      return(
+       <>
+        <p>Mechanical</p>
+        <Branches/>
+       </>
+        )
+    }
+    else if(branch1==="CIVIL"){
+      return(
+       <>
+       <p>Civil</p>
+        <Branches/>
+       </>
+      )
+      }
+      else if(branch1==="ELECTR"){
+        return(
+
+         <>
+         <p>Electrical</p>
+          <Branches/>
+         </>
+          )
+        }
+      else{
+        return(
+
+         <>
+      <center><h3>Slect Branch first</h3></center>
+          {/* <Branches/> */}
+         </>
+        )
+      }
+  })()
+}
+</Globlepass.Provider>
 
 
-
-
-<Branches/>
 
 
 
@@ -101,7 +146,7 @@ export function Branches(){
         <div className="subject-of-yearas">
       
      <br/>
-     <center>Slect Branch and Year</center>
+     <center>Slect   Year</center>
      <br/>
       </div>
       )
@@ -125,6 +170,7 @@ export function Branches(){
 
 
 export function Subjectname(props){
+  const Nevigate=useNavigate()
 
  let subject1=[
   {
@@ -186,7 +232,17 @@ export function Subjectname(props){
     name:"Computer Network2"
   }
  ]
- console.log(props.year,"in render")
+//  console.log(props.year,"in render")
+const {branch}=useContext(Globlepass);
+
+function showsubjectpage(Y,sub){
+      // let sub1=sub.split(" ").map((w)=>{return(w.charAt(0).toUpperCase() + w.substring(1))})
+      //  console.log("retuen subject name : ",branch,Y,sub,sub1);
+       Nevigate(`/Notes/${branch}/${Y}/${sub}`)
+}
+
+
+
   return(
     <>
      <h4 className='slect-branch-name'>All Subject :-</h4>
@@ -206,9 +262,9 @@ export function Subjectname(props){
           }
         })()
         .map(
-          (item)=>{
+          (item,i)=>{
             return(
-              <div className="subject-one">{item.name}</div>
+              <div key={i} onClick={()=>showsubjectpage(props.year,item.name)} className="subject-one">{item.name}</div>
             )
           }
         )

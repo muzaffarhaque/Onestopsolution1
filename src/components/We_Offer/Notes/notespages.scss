@@ -11,7 +11,10 @@
     float: left;
 }
 .top-hedder-back-frame {
+    display: inline-block;
+    width: 100%;
     text-align: center;
+    
     span {
 
         display: inline-block;
@@ -25,6 +28,18 @@
         border-bottom: 3px solid blue;
     }
 
+}
+.url-linkshows{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    float: left;
+    span{
+        font-size: calc(10px + .5vw);
+        color: rgb(146, 145, 145);
+    }
 }
 .banch-slected-opction {
     margin: 2vh 0;
@@ -53,11 +68,9 @@
     }
 }
 .year-branch2 {
-    
     box-shadow: 0 0 10px rgba(139, 153, 233, 0.8);
     color: red;
     &:hover {
-    
         color: red;
     }
 
@@ -155,7 +168,161 @@
     cursor: pointer;
     padding: 0.1vw;
 }
+
+
+
+
+// -------------------------------------- main-subject-notes-page-container ------------------------------------------//
+
+.main-subject-notes-page-container{
+    padding: 5px 3%;
+    
+}
+.subject-heating-name{
+    margin: 0px !important;
+    padding: 0 0 .5vw 0 !important;
+}
+.notes-subject-details-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    // border: 2px solid red;
+    padding: .5vh 3px;
+}
+.add-Notes-of-this-subject{
+    width: 25%;
+    font-size: calc(12px + .7vw);
+    color: var(--logoblue);
+    margin: 2vh 3%;
+    padding: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid rgba(143, 132, 132, 0.1);
+    outline: none;
+    background: blure(10);
+    &:hover{
+        background-color: rgb(212, 201, 201);
+        color: blueviolet;
+    }
+}
+.box-of-nodes-provided-by-any{
+    width: 25%;
+    min-width: 280px;
+    // border: 1px solid rgb(190, 195, 190);
+    box-shadow: 0px 0px 10px rgba(53, 52, 52,.3);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 2% 4%;
+    h3{
+        font-size: calc(13px + .7vw);
+    }
+    .box-notes-description{
+        width: 100%;
+        height: 130px;
+        max-height:200px;
+        overflow: auto;
+    }
+    p{
+        font-size: calc(10px + .5vw);
+        margin: 10px 0;
+        overflow: hidden;
+     
+        span{
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-style: oblique;
+            float: right;
+        }
+    }
+    a{
+      text-decoration: none;   
+     .download-Notes-button{
+        width: 100%;
+        font-size: calc(12px + .55vw);
+        padding: 4px;
+        margin: 9px 0px;
+        border: 2px solid whitesmoke;
+        border-radius: 5px;
+       
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+            background-color: whitesmoke;
+            color: #345e9e;
+            box-shadow:inset 0px 0px 10px rgba(82, 79, 79,.2);
+        }
+      }
+    }
+
+}
+.add-notes-form-conatiner{
+    width: 70%;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #eaeef6;
+    padding: 3%;
+    .close-input-notes{
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        font-size: calc(14px + .6vw);
+        padding: 10px;
+        cursor: pointer;
+        color: #345e9e;
+        &:hover{
+            color: red;
+        }
+    }
+}
+.input-notes-form-data{
+    label{
+        font-size:calc(12px + .5vw);
+        display: block;
+        margin: 2vh 0;
+        input{
+            display: block;
+            width: 100%;
+            padding: 5px;
+            margin: 7px 0;
+            outline: none;
+            border: none;
+            font-size:calc(11px + .5vw);
+            border: 2px solid transparent;
+            &:focus-within{
+                border-bottom: 2px solid var(--logoblue);
+            }
+           
+        }
+    }
+    .submit-button-notes{
+        border: none;
+        font-size: calc(12px + .5vw);
+        font-weight: bold;
+        padding: 10px;
+        background-color: #345e9e;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        &:active{
+            color: red;
+        }
+        &:hover{
+            background-color: #4f6e9b;
+            color: whitesmoke;
+        }
+    }
+
+}
 @media (max-width:700px) {
+    .box-of-nodes-provided-by-any{
+        width: 95%;
+      
+    }
     .subject-one {
         width: 100% !important;
     }
@@ -166,4 +333,15 @@
         width: 100%;
       
     }
+    .subject-heating-name{
+        margin: 10px !important;
+        
+    }
+    .add-Notes-of-this-subject{
+        span{
+            display: none;
+        }
+    }
+    .add-notes-form-conatiner{
+        width: 100%;}
 }

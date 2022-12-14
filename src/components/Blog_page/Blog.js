@@ -45,6 +45,7 @@ async function calldata(){
 
 useEffect(
   ()=>{
+    console.log("hi")
  calldata()
   },[show]
 )

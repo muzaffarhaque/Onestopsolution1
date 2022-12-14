@@ -80,6 +80,7 @@ setDatainput({...datainput,[e.target.name]:e.target.value})
                                     <li>
                                         <span>{datainput.currntY}</span><br/>
                                     </li>
+                                    {/* <li><a download href={image1}>Download image</a></li> */}
                                   
                                   
                                 </ul>

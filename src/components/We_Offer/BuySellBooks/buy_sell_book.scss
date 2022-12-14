@@ -1,0 +1,260 @@
+.heading-book-name {
+    font-size: calc(14px + .6vw);
+    margin-top: 2vh;
+}
+.search-branch-books {
+    // border: 2px solid red;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    // padding: 2vh 0;
+    margin: 1vh 0;
+    // border-radius: 8px;
+    // box-shadow: 0px 0px 10px rgba(114, 112, 112,.2);
+    border: 1px solid rgb(217, 217, 217);
+    label {
+        font-size: calc(12px + .7vw);
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding: 5px 1vw;
+        margin: 1vh 1vw;
+
+        //  width: 33%;
+
+    }
+}
+.serch-book-button
+{
+    width: 100%;
+    padding:10px;
+    font-size: calc(11px + .7vw);
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(114, 114, 205);
+    &:hover{
+        background-color: blueviolet;
+    }
+}
+.serchinput {
+    border: none;
+    outline: none;
+    // display: inline;
+    // width: 67%;
+    padding: 1vh;
+    border-bottom: 1px solid rgb(93, 179, 90);
+    font-size: calc(12px + .6vw);
+    color: rgb(105, 104, 104);
+    &::placeholder {
+        font-size: calc(12px + .6vw);
+    }
+
+}
+
+.add_button_books {
+    button {
+        font-size: calc(12px + .7vw);
+        padding: 5px 1vw;
+        border: 2px solid skyblue;
+        color: blue;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-top: 2vh;
+        &:hover {
+            color: white;
+            background-color: blue;
+        }
+    }
+}
+.cancel-book-fome {
+    position: absolute;
+    right: 6vw;
+    top: 20px;
+    font-size: calc(13px + .6vw);
+    color: blue;
+    &:hover {
+        color: red;
+        cursor: pointer;
+    }
+}
+.fomr-frame-container {
+    position: fixed;
+    background-color: whitesmoke;
+    // border: 1px solid red;
+    width: 80%;
+    padding: 1% 3%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    h4 {
+        font-size: calc(14px + .7vw);
+        text-align: center;
+        width: 100%;
+        color: blue;
+        padding: 1vh;
+    }
+    .fieldset-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        fieldset {
+            background-color: white;
+            border: 2px solid rgb(160, 154, 154);
+            width: 43%;
+            margin: 2vh 0;
+            border-radius: 10px;
+            font-size: calc(12px + .6vw);
+            // box-shadow: 0px 0px 8px rgba(138, 138, 138,.3);
+            legend {
+                span {
+                    color: red;
+                }
+                padding: 0 5px;
+                margin-left: 10px;
+                // margin: 0px 1vw;
+                font-size: calc(10px + .5vw);
+            }
+            input,
+            select {
+                width: 100%;
+                font-size: calc(11px + .5vw);
+                border: none;
+                // border-bottom: 1px solid greenyellow;
+                outline: none;
+                margin-bottom: 0.8vh;
+                border-radius: 10px;
+                padding: 5px;
+                color: rgb(69, 68, 68);
+                &::placeholder {
+                    color: rgb(139, 138, 138);
+                }
+            }
+        }
+    }
+
+}
+.book-is-not-found{
+    color: red;
+    font-size: calc(16px + .8vw);
+}
+.found-result{
+    color: rgb(65, 65, 203);
+    font-size: calc(16px + .8vw);
+}
+.display-books-card-downloade {
+    width: 100%;
+    // border: 1px solid greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2vw 0;
+}
+.book-details-frame {
+    display: flex;
+    border: 1px solid rgba(186, 187, 190,.4);
+  
+    width: 44%;
+    margin: 2vh 0vw;
+    min-width: 370px;
+    //  height: 200px;
+     border-radius: 5px;
+     &:nth-child(3n){
+        border-left: 6px solid red;
+        box-shadow: 0px 0px 10px rgba(243, 198, 198, 0.6);
+     }
+     &:nth-child(3n - 1){
+        border-left: 6px solid rgb(253, 192, 79);
+        box-shadow: 0px 0px 10px rgba(245, 216, 148, 0.6);
+     }
+     &:nth-child(3n - 2){
+        border-left: 6px solid rgb(19, 231, 75);
+        box-shadow: 0px 0px 10px rgba(178, 230, 185, 0.6);
+     }
+    .bok_box {
+        &:first-child {
+            width: 33%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1vw;
+            img{
+                width:100%;
+                height: auto;
+            }
+
+        }
+        &:nth-child(2) {
+            width: 67%;
+            padding: .3vw;
+            h4{
+                font-size: calc(12px + .6vw);
+                color:rgb(60, 97, 171);
+                &:nth-child(even){
+                   
+                 }
+                
+            }
+            p{
+                height: 50px;
+                overflow: auto;
+                font-size: calc(10px + .45vw);
+                color: rgb(89, 87, 87);
+                margin: 1vh 0;
+            }
+            h5{
+                font-size: calc(11px + .45vw);
+                font-weight: 450;
+                color: rgb(54, 54, 53);
+                margin: .8vh 0;
+                span{
+                    font-weight: bold;
+                    color: black;
+
+                }
+                .branch-name{
+                    font-size: calc(10px + .2vw);
+                }
+            }
+
+
+        }
+    }
+}
+@media (max-width:800px) {
+    .search-branch-books {
+
+        label {
+            font-size: calc(12px + .8vw);
+            width: 100%;
+        }
+    }
+    .fomr-frame-container {
+        width: 95%;
+        position: relative;
+        top: 66%;
+        .fieldset-container {
+
+            fieldset {
+                width: 100%;
+                margin-top: 2vh;
+            }
+        }
+    }
+
+    .book-details-frame {
+        width: 100%;
+
+    }
+    .serchinput {
+      
+        width: 67%;}
+
+}
