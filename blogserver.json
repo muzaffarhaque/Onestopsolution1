@@ -1,5 +1,5 @@
 {
-  "blog": [
+  
     {
       "title": "Cloud computing",
       "author": "Haque",
@@ -42,5 +42,5 @@
       "date1": "27/10/2022",
       "id": 6
     }
-  ]
+  
 }
