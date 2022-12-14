@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Onestopsolution1/static/css/main.e676dab9.css",
+    "main.js": "/Onestopsolution1/static/js/main.580e8390.js",
+    "static/js/787.ec704a7a.chunk.js": "/Onestopsolution1/static/js/787.ec704a7a.chunk.js",
+    "static/media/kelly-sikkema-9OGNpJPVMZ8-unsplash.jpg": "/Onestopsolution1/static/media/kelly-sikkema-9OGNpJPVMZ8-unsplash.546fe1b4c647fb823814.jpg",
+    "static/media/login2-removebg-preview.png": "/Onestopsolution1/static/media/login2-removebg-preview.a7c2178803b2b12e8b7d.png",
+    "static/media/blank-profile-picture-g377320d6d_1280.png": "/Onestopsolution1/static/media/blank-profile-picture-g377320d6d_1280.c3f945216dc12c9498dc.png",
+    "static/media/logo.webp": "/Onestopsolution1/static/media/logo.7cd1e2c375224d28ad0a.webp",
+    "static/media/webp": "/Onestopsolution1/static/media/6262752089315739826.65c75fb76c3f673cd5db.webp",
+    "static/media/study.webp": "/Onestopsolution1/static/media/study.299dd34f61409a775c2b.webp",
+    "static/media/logo-full.jpeg": "/Onestopsolution1/static/media/logo-full.f7763416dbaab3721c2f.jpeg",
+    "static/media/login.jpeg": "/Onestopsolution1/static/media/login.2220b7e9d63fc26ca8fd.jpeg",
+    "index.html": "/Onestopsolution1/index.html",
+    "main.e676dab9.css.map": "/Onestopsolution1/static/css/main.e676dab9.css.map",
+    "main.580e8390.js.map": "/Onestopsolution1/static/js/main.580e8390.js.map",
+    "787.ec704a7a.chunk.js.map": "/Onestopsolution1/static/js/787.ec704a7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e676dab9.css",
+    "static/js/main.580e8390.js"
+  ]
+}
