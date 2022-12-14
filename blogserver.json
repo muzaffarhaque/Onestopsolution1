@@ -1,0 +1,46 @@
+{
+  "blog": [
+    {
+      "title": "Cloud computing",
+      "author": "Haque",
+      "date1": "8/10/2022",
+      "details": "Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user. Large clouds often have functions distributed over multiple locations, each of which is a data center.\nThere are four main types of cloud computing: private clouds, public clouds, hybrid clouds, and multiclouds.",
+      "id": 1
+    },
+    {
+      "title": "Blockchain",
+      "author": "Muzafarul ",
+      "date1": "8/10/2022",
+      "details": "A blockchain is a decentralized ledger of all transactions across a peer-to-peer network. Using this technology, participants can confirm transactions without a need for a central clearing authority. Potential applications can include fund transfers, settling trades, voting and many other issues.\n        Bitcoin and Ethereum are popular examples of blockchains. Everyone is allowed to connect to the blockchain and transact on them.",
+      "id": 2
+    },
+    {
+      "title": "Brydagrety",
+      "author": "Muzafar",
+      "details": "happy to this do i am not ha date",
+      "date1": "8/10/2022",
+      "id": 3
+    },
+    {
+      "title": "How  to pass exam without staduy?",
+      "author": "Failure Person",
+      "details": "It's possible when U are become Some persone.",
+      "date1": "10/10/2022",
+      "id": 4
+    },
+    {
+      "title": "What does a blockchain do?",
+      "author": "zafeer",
+      "details": "A blockchain is a decentralized ledger of all transactions across a peer-to-peer network. Using this technology, participants can confirm transactions without a need for a central clearing authority. Potential applications can include fund transfers, settling trades, voting and many other issues.",
+      "date1": "9/10/2022",
+      "id": 5
+    },
+    {
+      "title": "fcdcdfv",
+      "author": "fsfvvfsv",
+      "details": "vfsvg",
+      "date1": "27/10/2022",
+      "id": 6
+    }
+  ]
+}
