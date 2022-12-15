@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Onestopsolution1/static/css/main.a22426ec.css",
-    "main.js": "/Onestopsolution1/static/js/main.9e840f6f.js",
+    "main.js": "/Onestopsolution1/static/js/main.f46d4759.js",
     "static/js/787.ec704a7a.chunk.js": "/Onestopsolution1/static/js/787.ec704a7a.chunk.js",
     "static/media/kelly-sikkema-9OGNpJPVMZ8-unsplash.jpg": "/Onestopsolution1/static/media/kelly-sikkema-9OGNpJPVMZ8-unsplash.546fe1b4c647fb823814.jpg",
     "static/media/login2-removebg-preview.png": "/Onestopsolution1/static/media/login2-removebg-preview.a7c2178803b2b12e8b7d.png",
@@ -13,11 +13,11 @@
     "static/media/login.jpeg": "/Onestopsolution1/static/media/login.2220b7e9d63fc26ca8fd.jpeg",
     "index.html": "/Onestopsolution1/index.html",
     "main.a22426ec.css.map": "/Onestopsolution1/static/css/main.a22426ec.css.map",
-    "main.9e840f6f.js.map": "/Onestopsolution1/static/js/main.9e840f6f.js.map",
+    "main.f46d4759.js.map": "/Onestopsolution1/static/js/main.f46d4759.js.map",
     "787.ec704a7a.chunk.js.map": "/Onestopsolution1/static/js/787.ec704a7a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a22426ec.css",
-    "static/js/main.9e840f6f.js"
+    "static/js/main.f46d4759.js"
   ]
 }
