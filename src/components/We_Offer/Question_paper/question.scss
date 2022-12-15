@@ -1,57 +1,56 @@
-.main-container-of-QustionPaper{
+.main-container-of-QustionPaper {
     padding: 1vh 3%;
 }
 // input form data taking question parper form user
-.form-input-question-paper-data{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 73%;
-  background-color: rgba(238, 230, 230,.4);
-  border-radius: 10px;
-  padding: 2vw;
-  .cancel-qp{
-    font-size: calc(12px + .6vw);
-    position: absolute;
-    top: 20px;
-    right: 2vw;
-    &:hover{
-        color: red;
+.form-input-question-paper-data {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 73%;
+    background-color: rgb(253, 246, 246);
+    border-radius: 10px;
+    padding: 2vw;
+    .cancel-qp {
+        font-size: calc(12px + .6vw);
+        position: absolute;
+        top: 20px;
+        right: 2vw;
+        &:hover {
+            color: red;
+        }
     }
-  }
 }
 
-.form-frame-qp{
+.form-frame-qp {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    fieldset{
+    fieldset {
         width: 43%;
         min-width: 300px;
         border: 2px solid whitesmoke;
         background-color: white;
         border-radius: 4px;
         margin: 2vh 0;
-        legend{
-            padding: 0 .5vw;
-            padding-top: .5vh;
-            margin-left: .7vw;
+        legend {
+            padding: 0.5vh 0.5vw 0;
+            margin-left: 0.7vw;
             font-size: calc(12px + .5vw);
             font-weight: bold;
             background-color: white;
             border-radius: 4px;
         }
-        input{
+        input {
             font-size: calc(12px + .5vw);
             color: rgb(63, 60, 60);
             width: 100%;
-            padding: .5vw;
+            padding: 0.5vw;
             outline: none;
             border: none;
             // border: 1px solid whitesmoke;
-            &::placeholder{
+            &::placeholder {
                 color: rgb(110, 107, 107);
                 font-size: calc(12px + .5vw);
             }
@@ -59,27 +58,143 @@
     }
 }
 
-.submit-button{
-font-size: calc(12px + .6vw);
-color: white;
-background-color: rgb(73, 73, 207);
-padding: 5px 1vw;
-border: none;
-outline: none;
-cursor: pointer;
-margin-top: 2vh;
-&:hover{
-background-color: blueviolet;
+.submit-button {
+    font-size: calc(12px + .6vw);
+    color: white;
+    background-color: rgb(73, 73, 207);
+    padding: 5px 1vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 2vh;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    &:hover {
+        background-color: rgb(192, 186, 197);
+        color: blueviolet;
+        border: 2px solid blue;
+    }
 }
+// ? Question paper serch bar css start 
+
+.serch-frame-questonPapeer {
+    border: 2px solid red;
+    border: 1px solid whitesmoke;
+
+    padding: 1vw;
+    .input-serch-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        label {
+            width: 40%;
+            display: block;
+            border: 1px solid whitesmoke;
+            padding: 0.2vw 1vw;
+            border-radius: 20px;
+            color: rgb(93, 113, 171);
+            box-shadow: 0 0 10px rgba(113, 168, 226, 0.3);
+            // background-color: rgba(202, 212, 212, 0.1);
+            input {
+                font-size: calc(11px + .5vw);
+                color: rgb(86, 83, 83);
+                padding: 1vh;
+                outline: none;
+                border: none;
+                width: 90%;
+                margin-left: 1vw;
+                &::placeholder {
+                    font-size: calc(11px + .5vw);
+                    color: rgb(157, 152, 152);
+                }
+            }
+        }
+    }
 }
+//? add Q/p Card and button
 
+.add-and-show-question-paper {
+    }
+.question-paper-cards {
+    // border: 2px solid blue;
+    margin: 3vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-@media (max-width:800px){
-    .form-input-question-paper-data{
+}
+.card-frame-queston-paper {
+    width: 28%;
+    min-width: 300px;
+    border: 1px solid whitesmoke;
+    margin: 2vh 1vh;
+    box-shadow: 0 0 10px rgba(111, 111, 196,.5);
+    padding: 10px;
+    border-radius: 10px;
+    .image-box-question {
+        height: 80px;
+        overflow: hidden;
+        margin-bottom: 1vh;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    h2 {
+        font-size: calc(12px + .7vw);
+        padding: 1vh 0;
+        color: rgb(91, 91, 205);
+    }
+    h3 {
+        font-size: calc(11px + .6vw);
+        color: rgb(114, 113, 113);
+        margin: 1vh 0;
+        span {
+            font-weight: bold;
+            font-size: calc(11px + .6vw);
+            color: rgb(15, 14, 14);
+
+        }
+        .univercity-name {
+            font-weight: bold;
+            font-size: calc(10px + .4vw);
+            color: rgb(15, 14, 14);
+        }
+    }
+}
+@media (max-width:800px) {
+    .form-input-question-paper-data {
         width: 93%;
-        fieldset{
+        fieldset {
             width: 100% !important;
             min-width: 250px;
         }
-      }
+    }
+    .serch-frame-questonPapeer {
+        .input-serch-box {
+            padding: 0 0 0 2vh;
+            label {
+                width: 100%;
+                margin-top: 3vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+   
+}
+
+
+@media (max-width:600px) {
+    .card-frame-queston-paper {
+        min-width:270px;
+    
+    
+       
+    
+    }
+
 }

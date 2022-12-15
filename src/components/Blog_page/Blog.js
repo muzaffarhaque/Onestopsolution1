@@ -1,5 +1,6 @@
 import React from 'react'
 import "./blog.scss"
+import axios from 'axios'
 import {link} from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft,faArrowCircleUp,faPlus,faTrash ,faEdit} from '@fortawesome/free-solid-svg-icons'
@@ -36,16 +37,20 @@ function addingblogbyuser(){
 }
 
 async function calldata(){
-  const responce=await fetch("http://localhost:3500/blog");
- const info=await responce.json()
-
- setFetchdata(info)
+//   const responce=await fetch("https://muzaffarhaque.github.io/Onestopsolution1/blogserver.json");
+//   console.log(responce)
+//  const info=await responce.json()
+axios.get("https://muzaffarhaque.github.io/Onestopsolution1/blogserver.json")
+.then(
+  (res)=>{setFetchdata(res.data);console.log(res)}
+)
+//  setFetchdata(info)
  
 }
 
 useEffect(
   ()=>{
-    console.log("hi")
+    // console.log("hi")
  calldata()
   },[show]
 )
